@@ -1,5 +1,5 @@
 <template>
-  <md-card-media md-medium>
+  <md-card-media>
     <div :class="{upBackgroundColor: up, downBackgroundColor: !up, backgroundStyle: true}">
       <div class="verticalCenter">
         {{ dataFormatter }}

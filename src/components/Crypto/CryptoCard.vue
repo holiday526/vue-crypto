@@ -2,7 +2,7 @@
   <md-card>
     <md-ripple>
       <md-card-header class="m0">
-        <md-card-media md-medium style="margin-right: 15px">
+        <md-card-media style="margin-right: 10px; margin-left: 0">
           <img :src="imageSrc">
         </md-card-media>
 
@@ -10,11 +10,11 @@
           <div class="md-title cardTitle">{{ cryptoAbbr }}: <span :class="{up: up, down: !up}">{{
               formattedCurrentPrice
             }}</span></div>
-          <div class="md-subhead cardSubhead" style="display: inline-block">
+          <div class="md-subhead cardSubhead">
             <span style="padding-right: 7px">O: {{ this.responseData.tick.open }} </span>
             <span>H: {{ this.responseData.tick.high }} </span>
           </div>
-          <div class="md-subhead cardSubhead" style="display: inline-block">
+          <div class="md-subhead cardSubhead">
             <span style="padding-right: 7px">C: {{ this.responseData.tick.close }} </span>
             <span>L: {{ this.responseData.tick.low }} </span>
           </div>
@@ -118,7 +118,8 @@ export default {
 }
 .cardTitle {
   font-size: 3.1vh;
-  padding: 1vh;
+  padding: 0;
+  margin: 0;
 }
 
 .cardSubhead {

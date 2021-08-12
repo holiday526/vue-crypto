@@ -1,9 +1,11 @@
 <template>
   <div>
-    <Clock/>
-    <crypto-card crypto-abbr="BTC" />
-    <crypto-card crypto-abbr="ETH" />
-    <crypto-card crypto-abbr="FLOW" />
+    <md-list class="md-triple-line">
+      <Clock/>
+      <crypto-card crypto-abbr="BTC" />
+      <crypto-card crypto-abbr="ETH" />
+      <crypto-card crypto-abbr="FLOW" />
+    </md-list>
   </div>
 </template>
 
