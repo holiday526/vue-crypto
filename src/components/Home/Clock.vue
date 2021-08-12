@@ -1,6 +1,6 @@
 <template>
   <md-card>
-    <md-card-content>
+    <md-card-content style="margin: 0">
       <div id="clock">
         <p class="date">{{ date }}</p>
         <p class="time">{{ time }}</p>
@@ -52,16 +52,14 @@
   }
 
   #clock {
-    font-family: 'Share Tech Mono', monospace;
     text-align: center;
     color: #ffffff;
-    /*text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);*/
   }
 
   .time {
     letter-spacing: 0.05em;
-    font-size: 80px;
-    padding: 20px 0;
+    font-size: 30px;
+    padding-top: 15px;
   }
 
   .date {
