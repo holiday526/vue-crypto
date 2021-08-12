@@ -32,6 +32,9 @@ export default {
     percentage: function () {
       this.up = this.percentage > 0;
     }
+  },
+  mounted() {
+    this.up = this.percentage > 0;
   }
 }
 </script>
@@ -42,8 +45,8 @@ export default {
   width: 100%;
   color: #ffffff;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
-  font-size: 2.7vh;
-  border-radius: 2vh;
+  font-size: 1.5em;
+  border-radius: 1em;
 }
 
 .verticalCenter {

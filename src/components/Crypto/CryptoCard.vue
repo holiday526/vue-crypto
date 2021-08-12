@@ -2,9 +2,10 @@
   <md-card>
     <md-ripple>
       <md-card-header class="m0">
-        <md-card-media style="margin-right: 10px; margin-left: 0">
-          <img :src="imageSrc">
-        </md-card-media>
+
+<!--        <md-card-media style="margin-right: 10px; margin-left: 0;">-->
+<!--          <img :src="imageSrc">-->
+<!--        </md-card-media>-->
 
         <md-card-header-text>
           <div class="md-title cardTitle">{{ cryptoAbbr }}: <span :class="{up: up, down: !up}">{{
@@ -117,13 +118,13 @@ export default {
   margin: 0
 }
 .cardTitle {
-  font-size: 3.1vh;
+  font-size: 2em;
   padding: 0;
   margin: 0;
 }
 
 .cardSubhead {
-  font-size: 1.3vh;
+  font-size: 0.9em;
   padding: 0vh;
 }
 
