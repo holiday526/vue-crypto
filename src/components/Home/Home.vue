@@ -4,6 +4,8 @@
       <Clock/>
       <crypto-card crypto-abbr="BTC" />
       <crypto-card crypto-abbr="ETH" />
+      <crypto-card crypto-abbr="FTT" />
+      <crypto-card crypto-abbr="SAND" />
       <crypto-card crypto-abbr="FLOW" />
     </md-list>
   </div>
