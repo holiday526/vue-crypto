@@ -1,7 +1,7 @@
 <template>
   <md-card>
-    <md-card-content style="margin: 0">
-      <div id="clock">
+    <md-card-content style="margin: 0;">
+      <div class="clock">
         <p class="date">{{ date }}</p>
         <p class="time">{{ time }}</p>
       </div>
@@ -51,20 +51,23 @@
     padding: 0;
   }
 
-  #clock {
+  .clock {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    color: #ffffff;
   }
 
   .time {
     letter-spacing: 0.05em;
-    font-size: 30px;
-    padding-top: 15px;
+    padding-top: 8px;
+    font-size: 2.5rem;
   }
 
   .date {
     letter-spacing: 0.1em;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(228, 222, 221);
   }
 
 </style>
