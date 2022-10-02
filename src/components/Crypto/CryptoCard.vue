@@ -12,12 +12,12 @@
               formattedCurrentPrice
             }}</span></div>
           <div class="md-subhead cardSubhead">
-            <span style="padding-right: 7px">O: {{ this.responseData.tick.open }} </span>
-            <span>H: {{ this.responseData.tick.high }} </span>
+            <span style="padding-right: 7px">O: {{ formatOpen }} </span>
+            <span>H: {{ formatHigh }} </span>
           </div>
           <div class="md-subhead cardSubhead">
-            <span style="padding-right: 7px">C: {{ this.responseData.tick.close }} </span>
-            <span>L: {{ this.responseData.tick.low }} </span>
+            <span style="padding-right: 7px">C: {{ formatClose }} </span>
+            <span>L: {{ formatLow }} </span>
           </div>
         </md-card-header-text>
 
@@ -72,18 +72,42 @@ export default {
           .catch((error) => {
             console.error(error);
           })
-    }
+    },
   },
   computed: {
     imageSrc() {
       return require('../../assets/' + this.cryptoAbbr + '.png');
     },
     formattedCurrentPrice() {
-      if (this.responseData !== null) {
+      if (this.responseData !== null && this.responseData?.tick !== undefined) {
         return '$' + ((this.responseData.tick.ask[0] + this.responseData.tick.bid[0]) / 2).toFixed(2)
       } else {
         return 'loading'
       }
+    },
+    formatOpen() {
+      if (this.responseData !== null && this.responseData?.tick !== undefined) {
+        return (this.responseData.tick.open).toFixed(2)
+      }
+      return '...'
+    },
+    formatClose() {
+      if (this.responseData !== null && this.responseData?.tick !== undefined) {
+        return (this.responseData.tick.close).toFixed(2)
+      }
+      return '...'
+    },
+    formatHigh() {
+      if (this.responseData !== null && this.responseData?.tick !== undefined) {
+        return (this.responseData.tick.high).toFixed(2)
+      }
+      return '...'
+    },
+    formatLow() {
+      if (this.responseData !== null && this.responseData?.tick !== undefined) {
+        return (this.responseData.tick.low).toFixed(2)
+      }
+      return '...'
     },
     updateTime() {
       if (this.responseData !== null) {
